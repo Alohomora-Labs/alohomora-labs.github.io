@@ -158,6 +158,142 @@ footer {
   background: radial-gradient(circle, #bba14f 0%, #e6e0ff 80%, transparent 100%);
   filter: blur(2px);
 }
+/* Publications & Works Section */
+.publications {
+  padding: 2.5rem 0 3rem 0;
+  background: none;
+}
+.pubs-title {
+  font-family: 'Marcellus', serif;
+  color: #bba14f;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.pub-item {
+  background: #fffbe9cc;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px #bba14f22;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border: 1.5px solid #e6e0ff;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.pub-item:hover {
+  box-shadow: 0 8px 32px #bba14f44;
+  transform: translateY(-2px) scale(1.01);
+}
+.pub-header {
+  font-size: 1.08rem;
+  margin-bottom: 0.5rem;
+}
+.pub-title {
+  font-weight: 600;
+  color: #2d2546;
+}
+.pub-authors {
+  color: #5a4e7c;
+  font-size: 0.98rem;
+}
+.pub-doi {
+  color: #bba14f;
+  font-size: 0.95rem;
+}
+.pub-doi a {
+  color: #bba14f;
+  text-decoration: underline dotted;
+}
+.pub-toggle {
+  margin-top: 0.7rem;
+  background: linear-gradient(90deg, #bba14f 0%, #ffd700 100%);
+  color: #2d2546;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.4rem 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #bba14f22;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.pub-toggle:hover {
+  background: linear-gradient(90deg, #ffd700 0%, #bba14f 100%);
+  color: #2d2546;
+  box-shadow: 0 4px 16px #bba14f44;
+}
+.pub-desc {
+  margin-top: 1rem;
+  background: #f8f6f0;
+  border-radius: 0.8rem;
+  padding: 1rem 1.2rem;
+  color: #2d2546;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px #bba14f11;
+  animation: fadeInPub 0.3s;
+}
+@keyframes fadeInPub {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Join Us Section */
+.join-us {
+  padding: 2.5rem 0 3rem 0;
+  background: none;
+}
+.join-title {
+  font-family: 'Marcellus', serif;
+  color: #bba14f;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+.join-flex {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.join-guide, .join-methods {
+  background: #fffbe9cc;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px #bba14f22;
+  padding: 2rem 1.5rem;
+  min-width: 260px;
+  max-width: 340px;
+  flex: 1 1 260px;
+  border: 1.5px solid #e6e0ff;
+  margin-bottom: 1rem;
+}
+.join-guide h3, .join-methods h3 {
+  font-family: 'Marcellus', serif;
+  color: #bba14f;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+.join-guide ul, .join-methods ol {
+  margin: 0 0 0 1.2rem;
+  padding: 0;
+  color: #2d2546;
+  font-size: 1rem;
+}
+.join-guide li, .join-methods li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+.join-methods a {
+  color: #5a4e7c;
+  text-decoration: underline dotted;
+  font-weight: 500;
+}
 @media (max-width: 800px) {
   .highlights-flex {
     flex-direction: column;
@@ -168,5 +304,16 @@ footer {
   }
   .hero h1 {
     font-size: 2rem;
+  }
+  .pub-list {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+  .join-flex {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .join-guide, .join-methods {
+    max-width: 100%;
   }
 } 
