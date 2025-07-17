@@ -52,27 +52,50 @@
         <h2 class="pubs-title">Publications & Works</h2>
         <div class="pub-list">
           <div class="pub-item">
-            <div class="pub-header">
-              <span class="pub-title">Recent Use of Deep Learning for Fall Risk Assessment in Elderly and Parkinson’s Disease Patients: A Systematic Review</span><br/>
-              <span class="pub-authors">Dr. Jayeeta Chakraborty, Harshit Agarwal</span><br/>
-              <span class="pub-doi">DOI: <a href="https://doi.org/10.0000/mockdoi.123456" target="_blank">10.0000/mockdoi.123456</a></span>
-              <button class="pub-toggle" onclick="togglePubDesc('desc1')">Show Description ▼</button>
+            <div class="pub-header" style="display:flex; align-items:flex-start; justify-content:space-between; gap:1.5em;">
+              <div class="pub-header-main">
+                <span class="pub-title">Recent Use of Deep Learning for Fall Risk Assessment in Elderly and Parkinson’s Disease Patients: A Systematic Review</span><br/>
+                <span class="pub-authors">Dr. Jayeeta Chakraborty, Harshit Agarwal</span><br/>
+                <span class="pub-doi">Coming soon</span>
+              </div>
+              <div class="pub-header-toggle">
+                <button class="pub-toggle" onclick="togglePubDesc('desc1')">Show Description ▼</button>
+              </div>
             </div>
             <div class="pub-desc" id="desc1" style="display:none;">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. Etiam vitae velit at quam facilisis gravida.</p>
+              <p>Gait imbalances are a common cause of injury in elderly people, which can lead to instability and increase the risk of falling. The recent introduction of deep learning (DL)-based gait assessment methods has affected fall prevention systems in elderly and Parkinson's Disease (PD) patients. In this scoping review, we curate and provide a summary of these studies. We discuss the effectiveness, feasibility, and necessity of DL-based methods for predicting sudden imbalances in gait, including muscle strain, Freezing of Gait (FoG), etc. We also discuss the challenges and limitations in translating DL models to both clinical and daily activities, including variations in movement patterns, sensor availability, and the need for robust generalization. We highlight the limitations of the existing studies and future trends that need to be addressed by the research community.</p>
             </div>
           </div>
           <div class="pub-item">
-            <div class="pub-header">
-              <span class="pub-title">GaitSetPy: A Professional Toolkit for Gait Analysis</span><br/>
-              <span class="pub-authors">Dr. Jayeeta Chakraborty, Harshit Agarwal</span><br/>
-              <span class="pub-doi">DOI: <a href="https://doi.org/10.5281/zenodo.16029953" target="_blank">10.5281/zenodo.16029953</a></span>
-              <button class="pub-toggle" onclick="togglePubDesc('desc2')">Show Description ▼</button>
+            <div class="pub-header" style="display:flex; align-items:flex-start; justify-content:space-between; gap:1.5em;">
+              <div class="pub-header-main">
+                <span class="pub-title">GaitSetPy: A Professional Toolkit for Gait Analysis</span><br/>
+                <span class="pub-authors">Harshit Agarwal, Dr. Jayeeta Chakraborty</span><br/>
+                <span class="pub-doi">DOI: <a href="https://doi.org/10.5281/zenodo.16029953" target="_blank">10.5281/zenodo.16029953</a></span>
+              </div>
+              <div class="pub-header-toggle">
+                <button class="pub-toggle" onclick="togglePubDesc('desc2')">Show Description ▼</button>
+              </div>
             </div>
             <div class="pub-desc" id="desc2" style="display:none;">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. Etiam vitae velit at quam facilisis gravida.</p>
+              <p>GaitSetPy is a modular, extensible Python toolkit designed to advance research and development in gait analysis and recognition. Addressing the growing need for reproducible, flexible, and scalable software in human movement studies, GaitSetPy provides a unified framework for loading diverse gait datasets, preprocessing time series data, extracting a wide range of gait features, performing exploratory data analysis, and applying state-of-the-art machine learning models. The architecture is built around abstract base classes and singleton managers, enabling seamless integration of new datasets, feature extractors, preprocessors, analyzers, and classifiers through a plugin-based system. GaitSetPy supports both modern class-based and legacy function-based APIs, ensuring backward compatibility while promoting best practices in software design. The toolkit includes ready-to-use workflows for popular datasets such as <a href="https://archive.ics.uci.edu/ml/datasets/Daphnet+Freezing+of+Gait" target="_blank">Daphnet</a>, MobiFall, <a href="https://physionet.org/content/gaitdb/1.0.0/" target="_blank">PhysioNet</a>, <a href="https://sites.google.com/up.edu.mx/har-up/" target="_blank">HAR-UP</a>, and Arduous, and offers utilities for statistical, time, and frequency domain feature extraction, as well as visualization and evaluation tools. By fostering modularity, extensibility, and ease of use, GaitSetPy aims to accelerate innovation and reproducibility in gait research. The package is open source and available at <a href="https://github.com/Alohomora-Labs/gaitSetPy" target="_blank">https://github.com/Alohomora-Labs/gaitSetPy</a></p>
             </div>
           </div>
+          <!-- <div class="pub-item">
+            <div class="pub-header" style="display:flex; align-items:flex-start; justify-content:space-between; gap:1.5em;">
+              <div class="pub-header-main">
+                <span class="pub-title">Benchmarking Preprocessing, Feature Extraction, and Machine Learning Methods for Emotional Detection Using EEG Data</span><br/>
+                <span class="pub-authors">Harshit Agarwal, Dr. Jayeeta Chakraborty</span><br/>
+                <span class="pub-doi">Coming soon</span>
+              </div>
+              <div class="pub-header-toggle">
+                <button class="pub-toggle" onclick="togglePubDesc('desc3')">Show Description ▼</button>
+              </div>
+            </div>
+            <div class="pub-desc" id="desc3" style="display:none;">
+              <p>Emotional detection from EEG signals presents unique challenges due to the complex, non-stationary nature of brain signals and the subjective interpretation of emotions. This comprehensive benchmarking study evaluates the effectiveness of various preprocessing techniques, feature extraction methods, and machine learning algorithms for emotion classification using EEG data. We systematically compare traditional signal processing approaches (bandpass filtering, artifact removal, spectral analysis) with advanced preprocessing methods (independent component analysis, wavelet transforms, adaptive filtering). For feature extraction, we benchmark time-domain features (statistical moments, Hjorth parameters), frequency-domain features (power spectral density, band power ratios), and time-frequency features (wavelet coefficients, spectrograms) against emerging deep learning-based feature representations. Our evaluation encompasses classical machine learning algorithms (SVM, Random Forest, k-NN), ensemble methods, and state-of-the-art deep learning architectures (CNNs, RNNs, Transformers) across multiple publicly available EEG emotion datasets. We provide detailed performance metrics, computational complexity analysis, and practical recommendations for researchers and practitioners in affective computing and brain-computer interfaces. The study also addresses critical challenges such as inter-subject variability, cross-dataset generalization, and real-time processing constraints, offering insights into the optimal pipeline for emotion detection applications.</p>
+            </div>
+          </div> -->
         </div>
       </div>
     </section>
