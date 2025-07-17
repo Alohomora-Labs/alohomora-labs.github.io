@@ -137,6 +137,105 @@ nav a:hover::after {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
+
+/* Halo Lab Talks Section */
+.halo-talks {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f8f6f0 0%, #e6e0ff 50%, #f8f6f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.halo-talks::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23bba14f" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%23ffd700" opacity="0.08"/><circle cx="40" cy="80" r="1" fill="%23bba14f" opacity="0.12"/></svg>') repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.halo-title {
+  font-family: 'Marcellus', serif;
+  font-size: 2.2rem;
+  color: #2d2546;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.halo-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.halo-content > p {
+  font-size: 1.2rem;
+  color: #5a4e7c;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.halo-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.halo-feature {
+  background: rgba(255, 251, 233, 0.8);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  max-width: 300px;
+  border: 1px solid rgba(186, 161, 79, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.halo-feature:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(186, 161, 79, 0.15);
+}
+
+.halo-feature h3 {
+  font-family: 'Marcellus', serif;
+  color: #bba14f;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.halo-feature p {
+  color: #5a4e7c;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.halo-cta {
+  margin-top: 2rem;
+}
+
+.halo-cta .button {
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #bba14f 0%, #ffd700 100%);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.halo-cta .button:hover {
+  background: linear-gradient(135deg, #ffd700 0%, #bba14f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(186, 161, 79, 0.3);
+}
 .button {
   display: inline-block;
   margin-top: 1rem;
@@ -721,5 +820,35 @@ footer {
   }
   .join-guide, .join-methods {
     max-width: 100%;
+  }
+  
+  /* Halo section mobile styles */
+  .halo-talks {
+    padding: 2rem 0;
+  }
+  
+  .halo-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .halo-content > p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .halo-features {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .halo-feature {
+    max-width: 100%;
+    padding: 1.2rem;
+  }
+  
+  .halo-feature h3 {
+    font-size: 1.2rem;
   }
 } 
