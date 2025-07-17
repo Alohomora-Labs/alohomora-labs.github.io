@@ -14,7 +14,12 @@
   <header class="site-header">
     <div class="container nav-flex">
       <div class="logo">Alohomora Labs</div>
-      <nav>
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="nav-menu">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="team.html">Team</a>
@@ -129,15 +134,57 @@
     </div>
   </footer>
   <script>
+    function toggleMenu() {
+      const hamburger = document.querySelector('.hamburger');
+      const nav = document.getElementById('nav-menu');
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+    }
+    
+    function handleNavClick(event) {
+      // Only handle mobile nav clicks
+      if (window.innerWidth <= 800) {
+        event.preventDefault();
+        const clickedLink = event.target;
+        const targetUrl = clickedLink.href;
+        
+        // Add fill animation to the clicked button
+        clickedLink.classList.add('fill-animation');
+        
+        // Wait for animation to complete, then navigate
+        setTimeout(function() {
+          window.location.href = targetUrl;
+        }, 800); // Match the buttonFill animation duration
+      }
+    }
+    
+    // Add click handlers to all nav links
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('#nav-menu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', handleNavClick);
+      });
+    });
+    
     function togglePubDesc(id) {
       var el = document.getElementById(id);
       var btn = event.target;
-      if (el.style.display === 'none') {
+      
+      if (el.style.display === 'none' || el.style.display === '') {
+        // Opening
         el.style.display = 'block';
+        el.classList.remove('closing');
         btn.textContent = 'Hide Description ▲';
       } else {
-        el.style.display = 'none';
+        // Closing
+        el.classList.add('closing');
         btn.textContent = 'Show Description ▼';
+        
+        // Wait for animation to complete before hiding
+        setTimeout(function() {
+          el.style.display = 'none';
+          el.classList.remove('closing');
+        }, 300); // Match the slideUp animation duration
       }
     }
   </script>
