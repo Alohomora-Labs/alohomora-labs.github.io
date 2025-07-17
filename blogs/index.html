@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Jayeeta's Blog Registry</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-flex">
+      <div class="logo">Alohomora Labs</div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../team.html">Team</a>
+        <a href="../gaitsetpy.html">GaitSetPy</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Dr. Jayeeta's Blog Registry</h1>
+        <p class="subtitle">Explore research, thoughts, and updates from Dr. Jayeeta Chakraborty.</p>
+      </div>
+    </section>
+    <section class="blog-list" id="blog-list-section">
+      <div class="container">
+        <ul id="blog-list">
+          <li><a href="#" data-md="introduction.md">Introduction</a> <span style="color: #888; font-size: 0.9em;">(July 04, 2022)</span></li>
+          <!-- Add more blog posts here as <li><a href="#" data-md="filename.md">Title</a></li> -->
+        </ul>
+      </div>
+    </section>
+    <section class="blog-content" id="blog-content-section" style="display:none;">
+      <div class="container">
+        <button onclick="showBlogList()" class="back-button" style="margin-bottom:1.5rem;">Back to Blog List</button>
+        <div id="blog-content"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <span>&copy; 2025 Alohomora Labs. All rights reserved.</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // Blog post click handler
+    document.querySelectorAll('#blog-list a[data-md]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const mdFile = link.getAttribute('data-md');
+        fetch(mdFile)
+          .then(res => res.text())
+          .then(md => {
+            document.getElementById('blog-content').innerHTML = marked.parse(md);
+            document.getElementById('blog-list-section').style.display = 'none';
+            document.getElementById('blog-content-section').style.display = 'block';
+            window.scrollTo(0, 0);
+          });
+      });
+    });
+    // Back to list
+    function showBlogList() {
+      document.getElementById('blog-content-section').style.display = 'none';
+      document.getElementById('blog-list-section').style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+  </script>
+</body>
+</html> 

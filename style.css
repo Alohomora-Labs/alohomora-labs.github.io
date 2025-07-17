@@ -294,6 +294,125 @@ footer {
   text-decoration: underline dotted;
   font-weight: 500;
 }
+.back-button {
+  display: inline-block;
+  padding: 0.5rem 1.3rem 0.5rem 1.8rem;
+  background: linear-gradient(90deg, #e6e0ff 0%, #ffd700 100%);
+  color: #2d2546;
+  font-weight: 600;
+  border-radius: 2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #bba14f22;
+  border: none;
+  font-size: 1.05rem;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.back-button::before {
+  content: '\2190';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1em;
+  color: #bba14f;
+}
+.back-button:hover {
+  background: linear-gradient(90deg, #ffd700 0%, #e6e0ff 100%);
+  color: #2d2546;
+  box-shadow: 0 4px 16px #bba14f44;
+  transform: translateY(-2px) scale(1.03);
+}
+.highlight-card a {
+  display: inline;
+  color: #bba14f;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.18s;
+  border-radius: 0.2em;
+  padding: 0;
+  margin: 0 0.1em;
+  background: none;
+  box-shadow: none;
+}
+.highlight-card a:hover, .highlight-card a:focus {
+  color: #2d2546;
+  text-decoration: underline solid #bba14f 1.5px;
+  background: none;
+  box-shadow: none;
+}
+.highlight-card a.blog-link {
+  color: #bba14f;
+  background: none;
+  text-decoration: underline;
+  position: relative;
+  padding-left: 1.3em;
+  font-weight: 600;
+}
+.highlight-card a.blog-link::before {
+  content: '\1F4D6'; /* Unicode for book emoji */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95em;
+  opacity: 0.7;
+  filter: none;
+}
+.highlight-card a.blog-link:hover, .highlight-card a.blog-link:focus {
+  color: #2d2546;
+  background: none;
+  text-decoration: underline solid #bba14f 1.5px;
+  box-shadow: none;
+}
+.card-links-row {
+  display: flex;
+  gap: 0.7em;
+  justify-content: center;
+  margin: 0.4em 0 0.2em 0;
+}
+.card-link-btn, .card-link-mail {
+  text-decoration: none !important;
+}
+.card-link-btn {
+  background: linear-gradient(90deg, #f8e7b5 0%, #e6e0ff 100%);
+  color: #7a5c13;
+  border: 1.5px solid #e6e0ff;
+  box-shadow: 0 2px 8px #bba14f22, 0 1.5px 0 #fffbe9 inset;
+}
+.card-link-btn:hover, .card-link-btn:focus {
+  background: linear-gradient(90deg, #ffe9a7 0%, #e6e0ff 100%);
+  color: #2d2546;
+  border-color: #ffd700;
+  box-shadow: 0 4px 16px #ffd70033, 0 1.5px 0 #fffbe9 inset;
+}
+.card-link-btn.blog-link {
+  background: linear-gradient(90deg, #e6e0ff 0%, #ffe9a7 100%);
+  color: #bba14f;
+  border: 1.5px solid #bba14f;
+}
+.card-link-btn.blog-link:hover, .card-link-btn.blog-link:focus {
+  background: linear-gradient(90deg, #fffbe9 0%, #ffd700 100%);
+  color: #2d2546;
+  border-color: #ffd700;
+  box-shadow: 0 4px 18px #ffd70044, 0 1.5px 0 #fffbe9 inset;
+}
+.card-link-mail {
+  background: linear-gradient(90deg, #e6e0ff 0%, #f8e7b5 100%);
+  color: #2d2546;
+  border: 1.5px solid #bba14f;
+  box-shadow: 0 2px 8px #bba14f22, 0 1.5px 0 #fffbe9 inset;
+}
+.card-link-mail:hover, .card-link-mail:focus {
+  background: linear-gradient(90deg, #ffe9a7 0%, #e6e0ff 100%);
+  color: #bba14f;
+  border-color: #ffd700;
+  box-shadow: 0 4px 16px #ffd70033, 0 1.5px 0 #fffbe9 inset;
+}
+.card-link-btn, .card-link-btn.blog-link, .card-link-mail {
+  border: none !important;
+}
 @media (max-width: 800px) {
   .highlights-flex {
     flex-direction: column;
