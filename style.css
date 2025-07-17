@@ -1,0 +1,172 @@
+/* Alohomora Labs Magical Research Lab Theme */
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(120deg, #f8f6f0 0%, #e6e0ff 100%);
+  color: #2d2546;
+  min-height: 100vh;
+}
+.site-header {
+  background: rgba(44, 36, 70, 0.95);
+  color: #ffe9a7;
+  box-shadow: 0 2px 8px rgba(44,36,70,0.08);
+  padding: 0.5rem 0;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-family: 'Marcellus', serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #ffe9a7;
+  text-shadow: 0 2px 8px #bba14f44;
+}
+nav a {
+  color: #ffe9a7;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  position: relative;
+}
+nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, #ffd700 0%, #bba14f 100%);
+  width: 100%;
+  border-radius: 2px;
+  margin-top: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+nav a.active,
+nav a:hover {
+  color: #ffd700;
+}
+nav a.active::after,
+nav a:hover::after {
+  transform: scaleX(1);
+}
+.hero {
+  padding: 4rem 0 2rem 0;
+  background: linear-gradient(120deg, #e6e0ff 0%, #f8f6f0 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero h1 {
+  font-family: 'Marcellus', serif;
+  font-size: 2.8rem;
+  color: #2d2546;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px #bba14f22;
+}
+.hero .subtitle {
+  font-size: 1.3rem;
+  color: #5a4e7c;
+  margin-bottom: 0;
+}
+.highlights {
+  padding: 2rem 0 3rem 0;
+  background: none;
+}
+.highlights-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.highlight-card {
+  background: #fffbe9cc;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px #bba14f22;
+  padding: 2rem 1.5rem;
+  max-width: 320px;
+  flex: 1 1 260px;
+  min-width: 240px;
+  text-align: center;
+  position: relative;
+  border: 1.5px solid #e6e0ff;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.highlight-card:hover {
+  box-shadow: 0 8px 32px #bba14f44;
+  transform: translateY(-4px) scale(1.03);
+}
+.highlight-card h2 {
+  font-family: 'Marcellus', serif;
+  color: #bba14f;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(90deg, #bba14f 0%, #ffd700 100%);
+  color: #2d2546;
+  font-weight: 600;
+  border-radius: 2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #bba14f33;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.button:hover {
+  background: linear-gradient(90deg, #ffd700 0%, #bba14f 100%);
+  color: #2d2546;
+  box-shadow: 0 4px 16px #bba14f44;
+}
+footer {
+  background: #2d2546;
+  color: #ffe9a7;
+  text-align: center;
+  padding: 1.2rem 0 0.8rem 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+}
+/* Subtle magical sparkles */
+.hero::before, .hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.18;
+  z-index: 0;
+}
+.hero::before {
+  width: 180px; height: 180px;
+  left: 8%; top: 18%;
+  background: radial-gradient(circle, #ffd700 0%, #fffbe9 80%, transparent 100%);
+  filter: blur(2px);
+}
+.hero::after {
+  width: 120px; height: 120px;
+  right: 10%; bottom: 10%;
+  background: radial-gradient(circle, #bba14f 0%, #e6e0ff 80%, transparent 100%);
+  filter: blur(2px);
+}
+@media (max-width: 800px) {
+  .highlights-flex {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .highlight-card {
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+} 

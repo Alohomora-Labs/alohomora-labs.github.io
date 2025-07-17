@@ -4,37 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Your project description here" />
-
-  <title>Your Project Title</title>
-
-  <!-- Favicon -->
+  <meta name="description" content="Alohomora Labs: Magical research in motion, gait analysis, and biotech. Home of GaitSetPy." />
+  <title>Alohomora Labs</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-  <!-- Google Fonts (optional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- External CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Marcellus&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Tailwind CSS (optional) -->
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-
 </head>
 <body>
-  <header>
-    <h1>Welcome to Your Project</h1>
+  <header class="site-header">
+    <div class="container nav-flex">
+      <div class="logo">Alohomora Labs</div>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="gaitsetpy.html">GaitSetPy</a>
+      </nav>
+    </div>
   </header>
-
   <main>
-    <p>This is a basic boilerplate HTML page.</p>
+    <section class="hero">
+      <div class="container">
+        <h1>Unlocking the Magic of Motion</h1>
+        <p class="subtitle">A research lab exploring the frontiers of gait, motion, and biotech with machine learning and deep learning.</p>
+      </div>
+    </section>
+    <section class="highlights">
+      <div class="container highlights-flex">
+        <div class="highlight-card">
+          <h2>What We Do</h2>
+          <p>We blend science and creativity to advance motion analysis, gait research, and biotechnology. Our work bridges data, algorithms, and the wonders of human movement.</p>
+        </div>
+        <div class="highlight-card">
+          <h2>Featured Toolkit</h2>
+          <p><strong>GaitSetPy</strong> — a professional, extensible toolkit for gait analysis, available on PyPI. Empowering researchers worldwide.</p>
+          <a href="gaitsetpy.html" class="button">Learn More</a>
+        </div>
+        <div class="highlight-card">
+          <h2>Our Team</h2>
+          <p>Driven by curiosity and expertise, our team brings together research, engineering, and a spark of magic. Meet the minds behind the lab.</p>
+          <a href="team.html" class="button">Meet the Team</a>
+        </div>
+      </div>
+    </section>
   </main>
-
   <footer>
-    <p>&copy; 2025 Your Name or Company</p>
+    <div class="container">
+      <span>&copy; 2025 Alohomora Labs. All rights reserved.</span>
+    </div>
   </footer>
-
-  <!-- External JS -->
-  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="GaitSetPy: Professional toolkit for gait analysis by Alohomora Labs." />
+  <title>GaitSetPy | Alohomora Labs</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Marcellus&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-flex">
+      <div class="logo">Alohomora Labs</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="gaitsetpy.html" class="active">GaitSetPy</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>GaitSetPy</h1>
+        <p class="subtitle">A professional, extensible toolkit for gait analysis and research.</p>
+      </div>
+    </section>
+    <section class="highlights">
+      <div class="container">
+        <div class="highlight-card" style="max-width:700px;margin:2rem auto;">
+          <h2>Overview</h2>
+          <p>GaitSetPy is a modular Python package for gait analysis and recognition, supporting both modern class-based and legacy function-based APIs. It provides tools for dataset loading, preprocessing, feature extraction, EDA, and machine learning classification—all organized with singleton managers and plugin-based extensibility.</p>
+          <h2>Key Features</h2>
+          <ul style="text-align:left;max-width:600px;margin:0 auto 1rem auto;">
+            <li>Modular architecture with abstract base classes and managers</li>
+            <li>Support for multiple gait datasets and feature extractors</li>
+            <li>Preprocessing pipelines and EDA tools</li>
+            <li>Machine learning models: Random Forest, MLP, LSTM, BiLSTM, GNN</li>
+            <li>Extensible via plugin registration</li>
+            <li>Available on PyPI: <a href="https://pypi.org/project/gaitsetpy/" target="_blank">gaitsetpy</a></li>
+          </ul>
+          <h2>Example Workflow</h2>
+          <pre style="background:#f8f6f0;border-radius:8px;padding:1rem;overflow-x:auto;font-size:1rem;">from gaitsetpy import load_and_analyze_physionet, train_gait_classifier
+
+data = load_and_analyze_physionet(data_dir='path/to/data')
+features = data['features']
+
+model = train_gait_classifier(features, model_type='random_forest')
+</pre>
+          <h2>Learn More</h2>
+          <p>See the <a href="https://github.com/alohomora-labs/gaitsetpy" target="_blank">GitHub repository</a> for documentation, examples, and source code.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <span>&copy; 2025 Alohomora Labs. All rights reserved.</span>
+    </div>
+  </footer>
+</body>
+</html> 
